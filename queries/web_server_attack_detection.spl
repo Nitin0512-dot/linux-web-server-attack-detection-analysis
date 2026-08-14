@@ -1,0 +1,4 @@
+index=main sourcetype=access_combined_wcookie
+| where status>=400
+| stats count as failed_attempts dc(uri) as unique_uri values(uri) as target_uri values(status) as status_code by clientip
+| sort -failed_attempts
