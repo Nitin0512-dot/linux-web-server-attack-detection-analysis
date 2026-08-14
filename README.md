@@ -5,6 +5,8 @@ This project focuses on identifying potential web scanning, directory enumeratio
 
 
 
-# Potential Data Exfiltration / Anomalous Data Transfer
+# Potential Data Exfiltration / Anomalous Data Transfer / Response size anomaly detection
 ## Objective:
 Detect potentially anomalous data transfer by looking for client IPs generating a high volume of successful HTTP requests and receiving a large amount of data within a short time window.
+
+Identify time periods where the average HTTP response size is significantly higher than the established baseline, indicating potentially unusual web server data transfer.
