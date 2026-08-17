@@ -1,4 +1,0 @@
-index=main sourcetype=access_combined_wcookie status=200
-| bin _time span=1m
-| stats count sum(bytes) as total_bytes max(bytes) as largest_bytes values(uri) as requested_uri by clientip
-| sort -total_bytes
