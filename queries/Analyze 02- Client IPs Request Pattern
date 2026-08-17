@@ -1,0 +1,3 @@
+index=main sourcetype=access_combined_wcookie 
+| stats count as total_request dc(uri) as unique_uri values(uri) as target_uri values(method) as http_status values(status) as status_code by clientip
+| sort -total_request
