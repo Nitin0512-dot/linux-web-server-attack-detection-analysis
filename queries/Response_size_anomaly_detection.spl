@@ -1,3 +1,0 @@
-index=main sourcetype=access_combined_wcookie
-| timechart span=1h avg(bytes) as Response_size
-| eventstats avg("Response_size") as overall_size
